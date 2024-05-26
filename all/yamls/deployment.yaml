@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: front
-        image: was24/front
+        image: was24/front:2.0.0
         resources:
           limits:
             memory: "128Mi"

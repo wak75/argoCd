@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: myapp-argo
+  namespace: argocd
+spec:
+  project: default
+
+  source:
+    repoURL: <Fill it once you created the repo>
+    targetRevision: HEAD
+    path: all #create a folder all in the repo then add all the files in it
+  destination:  
+    server: https://kubernetes.dafault.svc
+    namespace: kingnamespace
+
+  syncPolicy:
+    syncoptions:
+    - CreateNamespace=true
+
+  automated:
+    selfHeal: true
+    prune: true

@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: <Fill it once you created the repo>
     targetRevision: HEAD
-    path: all #create a folder all in the repo then add all the files in it
+    path: all/yaml/ #create a folder all in the repo then add all the files in it
   destination:  
     server: https://kubernetes.dafault.svc
     namespace: kingnamespace
